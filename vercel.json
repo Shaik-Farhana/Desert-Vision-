@@ -1,6 +1,7 @@
 {
-  "buildCommand": "cd src/frontend && pnpm install && pnpm build",
-  "outputDirectory": "src/frontend/dist",
-  "installCommand": "echo skip",
-  "framework": null
+  "rootDirectory": "src/frontend",
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist",
+  "installCommand": "pnpm install",
+  "framework": "vite"
 }
