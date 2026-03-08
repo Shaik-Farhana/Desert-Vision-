@@ -27,6 +27,11 @@
     "node_modules",
     "dist",
     "build",
-    "*.config.js"
+    "*.config.js",
+    "src/config.ts",
+    "src/backend.d.ts",
+    "src/hooks/useInternetIdentity.ts",
+    "src/utils/StorageClient.ts",
+    "src/declarations"
   ]
 }
