@@ -123,7 +123,7 @@ data/
 ```
 
 ### 4. Download model weights
-🔗 **[https://drive.google.com/file/d/1-mFP2126QX2YD-vZc7dGCH0HFyn-XZlo/view?usp=sharing](#)** 
+🔗 **https://drive.google.com/file/d/1-mFP2126QX2YD-vZc7dGCH0HFyn-XZlo/view?usp=sharing** 
 
 Place it at: `runs/exp1/best_model.pth`
 
@@ -202,7 +202,8 @@ Desert-Vision-/
 ## 👥 Team
 
 **Team DesertVision** — Duality AI Elite Hackathon 2026
-
+Team Leader - Ummul Faiz
+Memebers - Shaik Farhana , Hina Mehajabeen 
 ---
 
 ## 🙏 Acknowledgements
