@@ -171,7 +171,7 @@ Outputs saved to `runs/exp1/test_output/`:
 
 ## 🌐 Live Demo
 
-**https://desertvision.netlify.app**
+**https://shaik-farhana.github.io/Desert-Vision-/**
 
 Built with React + TypeScript + Vite + Framer Motion. Shows model architecture, per-class statistics, and interactive segmentation visualization.
 
