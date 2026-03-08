@@ -18,7 +18,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 /* ──────────────────────────────────────────────
-   DESIGN TOKENS (exact hex per spec)
+    DESIGN TOKENS (exact hex per spec)
 ────────────────────────────────────────────── */
 const C = {
   bg: "#0F1419",
@@ -32,7 +32,7 @@ const C = {
 };
 
 /* ──────────────────────────────────────────────
-   SEGMENTATION CLASSES + MOCK DATA
+    SEGMENTATION CLASSES + MOCK DATA
 ────────────────────────────────────────────── */
 const CLASSES = [
   { name: "Sky", color: "#87CEEB", pct: 18.2 },
@@ -48,7 +48,7 @@ const CLASSES = [
 ];
 
 /* ──────────────────────────────────────────────
-   DUST PARTICLE DATA (deterministic seeds)
+    DUST PARTICLE DATA (deterministic seeds)
 ────────────────────────────────────────────── */
 const DUST_PARTICLES = Array.from({ length: 28 }, (_, i) => ({
   id: i,
@@ -61,7 +61,7 @@ const DUST_PARTICLES = Array.from({ length: 28 }, (_, i) => ({
 }));
 
 /* ──────────────────────────────────────────────
-   CANVAS MASK DRAWING
+    CANVAS MASK DRAWING
 ────────────────────────────────────────────── */
 function drawMask(canvas: HTMLCanvasElement) {
   const ctx = canvas.getContext("2d");
@@ -221,7 +221,7 @@ function drawMask(canvas: HTMLCanvasElement) {
 }
 
 /* ──────────────────────────────────────────────
-   MAIN APP
+    MAIN APP
 ────────────────────────────────────────────── */
 export default function App() {
   const [uploadedImage, setUploadedImage] = useState<File | null>(null);
@@ -582,7 +582,7 @@ export default function App() {
                 borderColor: isDragging ? C.sandGold : `${C.sandGold}44`,
                 boxShadow: isDragging ? `0 0 30px ${C.sandGold}33` : "none",
               }}
-              onDragOver={(e) => {
+              onDragOver={(e: React.DragEvent<HTMLDivElement>) => {
                 e.preventDefault();
                 setIsDragging(true);
               }}
@@ -595,7 +595,7 @@ export default function App() {
                 type="file"
                 accept="image/jpeg,image/png"
                 className="hidden"
-                onChange={(e) =>
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   e.target.files?.[0] && handleFileSelect(e.target.files[0])
                 }
                 aria-label="Upload desert image"
@@ -631,7 +631,7 @@ export default function App() {
                     color: C.sandGold,
                     border: `1px solid ${C.sandGold}44`,
                   }}
-                  onClick={(e) => {
+                  onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
                     e.stopPropagation();
                     fileInputRef.current?.click();
                   }}
@@ -925,7 +925,7 @@ export default function App() {
                       min={0}
                       max={100}
                       value={overlayOpacity}
-                      onChange={(e) =>
+                      onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                         setOverlayOpacity(Number(e.target.value))
                       }
                       className="flex-1 h-1.5 rounded-full appearance-none cursor-pointer"
@@ -1169,7 +1169,7 @@ export default function App() {
                         fontFamily: '"Cabinet Grotesk", sans-serif',
                       }}
                     >
-                      XX.X%
+                      52.37%
                     </span>
                     <span
                       className="px-3 py-1 rounded-full text-xs font-semibold"
@@ -1365,16 +1365,6 @@ export default function App() {
                 className="text-xs mt-1"
                 style={{ color: `${C.textSecondary}77` }}
               >
-                Built with{" "}
-                <a
-                  href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(window.location.hostname)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline underline-offset-2 hover:opacity-80 transition-opacity"
-                  style={{ color: C.sandGold }}
-                >
-                  caffeine.ai
-                </a>
               </p>
             </div>
           </div>
