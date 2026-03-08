@@ -123,7 +123,7 @@ data/
 ```
 
 ### 4. Download model weights
-🔗 **[Download best_model.pth from Google Drive](#)** ← *(add your Drive link here)*
+🔗 **[https://drive.google.com/file/d/1-mFP2126QX2YD-vZc7dGCH0HFyn-XZlo/view?usp=sharing](#)** 
 
 Place it at: `runs/exp1/best_model.pth`
 
